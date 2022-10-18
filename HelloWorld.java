@@ -3,7 +3,6 @@ import java.util.concurrent.ThreadLocalRandom;
 
 public class HelloWorld {
 
-    public class main1 {
 
         public static String randomStringFromArr() {
             String[] pkn = {"papier", "kamień", "nożyczki"};
@@ -26,29 +25,21 @@ public class HelloWorld {
 
             if (x == "nożyczki" && y == "nożyczki") {
                 System.out.println("Gra zakończyła się remisem");
-            }
-            else if (x == "nożyczki" && y == "papier") {
+            } else if (x == "nożyczki" && y == "papier") {
                 System.out.println("Wygrał " + gracz1);
-            }
-            else if (x == "nożyczki" && y == "kamień") {
+            } else if (x == "nożyczki" && y == "kamień") {
                 System.out.println("Wygrał " + gracz2);
-            }
-            else if (x == "papier" && y == "nożyczki") {
+            } else if (x == "papier" && y == "nożyczki") {
                 System.out.println("Wygrał " + gracz2);
-            }
-            else if (x == "papier" && y == "papier") {
+            } else if (x == "papier" && y == "papier") {
                 System.out.println("Gra zakończyła się remisem");
-            }
-            else if (x == "papier" && y == "kamień") {
+            } else if (x == "papier" && y == "kamień") {
                 System.out.println("Wygrał " + gracz1);
-            }
-            else if(x == "kamień" && y == "nożyczki") {
+            } else if (x == "kamień" && y == "nożyczki") {
                 System.out.println("Wygrał " + gracz1);
-            }
-            else if (x == "kamień" && y == "papier") {
+            } else if (x == "kamień" && y == "papier") {
                 System.out.println("Wygrał " + gracz2);
-            }
-            else if(x == "kamień" && y == "kamień") {
+            } else if (x == "kamień" && y == "kamień") {
                 System.out.println("Gra zakończyła się remisem");
             }
         }
