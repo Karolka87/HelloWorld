@@ -16,14 +16,14 @@ import java.util.concurrent.ThreadLocalRandom;
                 gracz1 = "Maciej";
                 gracz2 = "Piotr";
                 String x, y;
-
+                int licznik1 = 0;
+                int licznik2 = 0;
                 System.out.println("Imiona dzisiejszych graczy to: " + gracz1 + " oraz " + gracz2);
 
                 for (int i = 0; i <= 19; i++) {
                     x = randomStringFromArr();
                     y = randomStringFromArr();
-                    int licznik1 = 0;
-                    int licznik2 = 0;
+
 
                     System.out.println(gracz1 + " wylosował: " + x);
                     System.out.println(gracz2 + " wylosował " + y);
@@ -53,9 +53,10 @@ import java.util.concurrent.ThreadLocalRandom;
                     } else if (x == "kamień" && y == "kamień") {
                         System.out.println("Gra zakończyła się remisem");
                     }
-                    System.out.println("Gracz " + gracz1 + " wygrał: " + licznik1 + " razy");
-                    System.out.println("Gracz " + gracz2 + " wygrał: " + licznik2 + " razy");
+
                 }
+                System.out.println("Gracz " + gracz1 + " wygrał: " + licznik1 + " razy");
+                System.out.println("Gracz " + gracz2 + " wygrał: " + licznik2 + " razy");
             }
         }
 
