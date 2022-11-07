@@ -8,6 +8,7 @@ import java.util.concurrent.ThreadLocalRandom;
 
             public static final String player1Choice = randomStringFromArr();
             public static final String player2Choice = randomStringFromArr();
+            public static final String gracz1 = "Maciej", gracz2 = "Piotr";
 
             public static String randomStringFromArr() {
                 String[] pkn = {PAPIER, KAMIEN, NOZYCZKI};
@@ -18,17 +19,18 @@ import java.util.concurrent.ThreadLocalRandom;
             }
 
             public static void main(String[] args) {
-                String gracz1, gracz2;
-                gracz1 = "Maciej";
-                gracz2 = "Piotr";
+                //gracz1 = "Maciej";
+                //gracz2 = "Piotr";
                 //String player1Choice, player2Choice;
-                int licznik1 = 0;
-                int licznik2 = 0;
+                int result = gameResult(player1Choice, player2Choice);
                 System.out.println("Imiona dzisiejszych graczy to: " + gracz1 + " oraz " + gracz2);
 
 
-                private static int gameResult(String player1Choice, String player2Choice) {
 
+            }
+            private static int gameResult(String player1Choice, String player2Choice) {
+                int licznik1 = 0;
+                int licznik2 = 0;
 
                 for (int i = 0; i <= 19; i++) {
 
@@ -37,7 +39,7 @@ import java.util.concurrent.ThreadLocalRandom;
 
                     if (player1Choice.equals(player2Choice)){
                         return 0;
-                    } else if ((player1Choice.equals(NOZYCZKI) && (player2Choice.equals(PAPIER)) {
+                    } else if (player1Choice.equals(NOZYCZKI) && player2Choice.equals(PAPIER)) {
                         return 1;
                         licznik1++;
                     } else if (player1Choice.equals(NOZYCZKI) && (player2Choice.equals(KAMIEN)) {
@@ -55,9 +57,9 @@ import java.util.concurrent.ThreadLocalRandom;
                     } else if (player1Choice.equals(KAMIEN) && (player2Choice.equals(PAPIER) {
                         System.out.println("Wygrał " + gracz2);
                         licznik2++;
-                        }
                     }
                 }
+
                 System.out.println("Gracz " + gracz1 + " wygrał: " + licznik1 + " razy");
                 System.out.println("Gracz " + gracz2 + " wygrał: " + licznik2 + " razy");
             }
