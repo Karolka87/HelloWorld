@@ -34,6 +34,7 @@ public class main1 {
 
         for (int i = 0; i <= 19; i++) {
             String player1Choice = randomStringFromArr();
+
             System.out.println("Podaj co chcesz zagrać: ");
             String player2Choice = scan.next();
 
@@ -44,11 +45,14 @@ public class main1 {
 
             if (result == 1) {
                 player1Result++;
+                System.out.println("Wygrał gracz: " + gracz1);
             }
             else if (result == 2) {
                 player2Result++;
+                System.out.println("Wygrał gracz: " + gracz2);
             }
             else if (result == 0) {
+                System.out.println("Remis");
             }
         }
         System.out.println(gracz1 + " wygrał " + player1Result + " razy");
