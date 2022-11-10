@@ -39,6 +39,8 @@ public class main1 {
             else if (result == 0) {
             }
         }
+        System.out.println(gracz1 + " wygrał " + player1Result + " razy");
+        System.out.println(gracz2 + " wygrał " + player2Result + " razy");
 
     }
 
