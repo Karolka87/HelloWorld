@@ -5,12 +5,14 @@ public class main1 {
     public static final String PAPIER = "papier";
     public static final String NOZYCZKI = "nozyczki";
     public static final String KAMIEN = "kamien";
+    public static final String SPOCK = "spock";
+    public static final String JASZCZURKA = "jaszczurka";
 
 
     public static final String gracz1 = "Maciej", gracz2 = "Piotr";
 
     public static String randomStringFromArr() {
-        String[] pkn = {PAPIER, KAMIEN, NOZYCZKI};
+        String[] pkn = {PAPIER, KAMIEN, NOZYCZKI, SPOCK, JASZCZURKA};
         int randIdx = ThreadLocalRandom.current().nextInt(pkn.length);
         String randomElem = pkn[randIdx];
         return randomElem;
@@ -26,8 +28,10 @@ public class main1 {
         for (int i = 0; i <= 19; i++) {
             String player1Choice = randomStringFromArr();
             String player2Choice = randomStringFromArr();
+
             System.out.println(gracz1 + " wylosowal: " + player1Choice);
             System.out.println(gracz2 + " wylosowal: " + player2Choice);
+
             int result = gameResult(player1Choice, player2Choice);
 
             if (result == 1) {
@@ -61,6 +65,34 @@ public class main1 {
         } else if (player1Choice.equals(KAMIEN) && player2Choice.equals(NOZYCZKI)) {
             return 1;
         } else if (player1Choice.equals(KAMIEN) && player2Choice.equals(PAPIER)) {
+            return 2;
+        }else if (player1Choice.equals(SPOCK) && player2Choice.equals(KAMIEN)) {
+            return 1;
+        } else if (player1Choice.equals(PAPIER) && player2Choice.equals(SPOCK)) {
+            return 1;
+        } else if (player1Choice.equals(JASZCZURKA) && player2Choice.equals(PAPIER)) {
+            return 1;
+        }else if (player1Choice.equals(NOZYCZKI) && player2Choice.equals(JASZCZURKA)) {
+            return 1;
+        }else if (player1Choice.equals(SPOCK) && player2Choice.equals(NOZYCZKI)) {
+            return 1;
+        }else if (player1Choice.equals(KAMIEN) && player2Choice.equals(JASZCZURKA)) {
+            return 1;
+        }else if (player1Choice.equals(JASZCZURKA) && player2Choice.equals(SPOCK)) {
+            return 1;
+        }else if (player1Choice.equals(KAMIEN) && player2Choice.equals(SPOCK)) {
+            return 2;
+        } else if (player1Choice.equals(SPOCK) && player2Choice.equals(PAPIER)) {
+            return 2;
+        } else if (player1Choice.equals(PAPIER) && player2Choice.equals(JASZCZURKA)) {
+            return 2;
+        }else if (player1Choice.equals(JASZCZURKA) && player2Choice.equals(NOZYCZKI)) {
+            return 2;
+        }else if (player1Choice.equals(NOZYCZKI) && player2Choice.equals(SPOCK)) {
+            return 2;
+        }else if (player1Choice.equals(JASZCZURKA) && player2Choice.equals(KAMIEN)) {
+            return 2;
+        }else if (player1Choice.equals(SPOCK) && player2Choice.equals(JASZCZURKA)) {
             return 2;
         }
 
