@@ -34,10 +34,11 @@ public class main1 {
 
         for (int i = 0; i <= 19; i++) {
             String player1Choice = randomStringFromArr();
-            String player2Choice = randomStringFromArr();
+            System.out.println("Podaj co chcesz zagrać: ");
+            String player2Choice = scan.next();
 
             System.out.println(gracz1 + " wylosowal: " + player1Choice);
-            System.out.println(gracz2 + " wylosowal: " + player2Choice);
+            System.out.println(gracz2 + " wybrał: " + player2Choice);
 
             int result = gameResult(player1Choice, player2Choice);
 
