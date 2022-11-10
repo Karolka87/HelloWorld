@@ -1,3 +1,4 @@
+import java.util.Scanner;
 import java.util.concurrent.ThreadLocalRandom;
 
 public class main1 {
@@ -9,7 +10,7 @@ public class main1 {
     public static final String JASZCZURKA = "jaszczurka";
 
 
-    public static final String gracz1 = "Maciej", gracz2 = "Piotr";
+
 
     public static String randomStringFromArr() {
         String[] pkn = {PAPIER, KAMIEN, NOZYCZKI, SPOCK, JASZCZURKA};
@@ -20,6 +21,12 @@ public class main1 {
     }
 
     public static void main(String[] args) {
+        Scanner scan = new Scanner(System.in);
+        System.out.println("Podaj imię pierwszego gracza: ");
+        String gracz1 = scan.nextLine();
+        System.out.println("Podaj imię drugiego gracza: ");
+        String gracz2 = scan.nextLine();
+
         System.out.println("Imiona dzisiejszych graczy to: " + gracz1 + " oraz " + gracz2);
         int player1Result = 0;
         int player2Result = 0;
