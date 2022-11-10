@@ -31,32 +31,26 @@ import java.util.concurrent.ThreadLocalRandom;
             private static int gameResult(String player1Choice, String player2Choice) {
                 int licznik1 = 0;
                 int licznik2 = 0;
+                System.out.println(gracz1 + " wylosował: " + player1Choice);
+                System.out.println(gracz2 + " wylosował " + player2Choice);
 
                 for (int i = 0; i <= 19; i++) {
 
-                    System.out.println(gracz1 + " wylosował: " + player1Choice);
-                    System.out.println(gracz2 + " wylosował " + player2Choice);
 
                     if (player1Choice.equals(player2Choice)){
                         return 0;
-                    } else if (player1Choice.equals(NOZYCZKI) && player2Choice.equals(PAPIER)) {
+                    } else if ((player1Choice.equals(NOZYCZKI) && player2Choice.equals(PAPIER)) {
                         return 1;
-                        licznik1++;
-                    } else if (player1Choice.equals(NOZYCZKI) && (player2Choice.equals(KAMIEN)) {
-                        System.out.println("Wygrał " + gracz2);
-                        licznik2++;
-                    } else if (player1Choice.equals(PAPIER) && (player2Choice.equals(NOZYCZKI)) {
-                        System.out.println("Wygrał " + gracz2);
-                        licznik2++;
-                    } else if (player1Choice.equals(PAPIER) && (player2Choice.equals(KAMIEN)) {
-                        System.out.println("Wygrał " + gracz1);
-                        licznik1++;
-                    } else if (player1Choice.equals(KAMIEN) && (player2Choice.equals(NOZYCZKI)) {
-                        System.out.println("Wygrał " + gracz1);
-                        licznik1++;
-                    } else if (player1Choice.equals(KAMIEN) && (player2Choice.equals(PAPIER) {
-                        System.out.println("Wygrał " + gracz2);
-                        licznik2++;
+                    } else if ((player1Choice.equals(NOZYCZKI) && (player2Choice.equals(KAMIEN)) {
+                        return 2;
+                    } else if ((player1Choice.equals(PAPIER) && (player2Choice.equals(NOZYCZKI)) {
+                        return 2;
+                    } else if ((player1Choice.equals(PAPIER) && (player2Choice.equals(KAMIEN)) {
+                        return 1;
+                    } else if ((player1Choice.equals(KAMIEN) && (player2Choice.equals(NOZYCZKI)) {
+                        return 1;
+                    } else if ((player1Choice.equals(KAMIEN) && (player2Choice.equals(PAPIER) {
+                        return 2;
                     }
                 }
 
@@ -64,4 +58,4 @@ import java.util.concurrent.ThreadLocalRandom;
                 System.out.println("Gracz " + gracz2 + " wygrał: " + licznik2 + " razy");
             }
         }
-
+}
